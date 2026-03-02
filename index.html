@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>jmrbs works</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Custom Cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- ── Header ── -->
+  <header>
+    <div class="site-title">
+      JM<span>RB's works</span>
+    </div>
+    <div class="header-meta">
+      <strong>Portfolio</strong>
+      A compilation of work<br>
+      Built with passion<br>
+      <span id="year"></span>
+    </div>
+  </header>
+
+  <!-- ── Marquee ── -->
+  <div class="marquee-wrap">
+    <div class="marquee-track">
+      <span>Motion Graphics</span><span class="dot">✦</span>
+      <span>Video Editing</span><span class="dot">✦</span>
+      <span>3D Design</span><span class="dot">✦</span>
+      <span>Broadcast Design</span><span class="dot">✦</span>
+      <span>Logo Animation</span><span class="dot">✦</span>
+      <span>Motion Graphics</span><span class="dot">✦</span>
+      <span>Video Editing</span><span class="dot">✦</span>
+      <span>3D Design</span><span class="dot">✦</span>
+      <span>Broadcast Design</span><span class="dot">✦</span>
+      <span>Logo Animation</span><span class="dot">✦</span>
+    </div>
+  </div>
+
+  <!-- ── Stats Bar ── -->
+  <div class="stats-bar">
+    <div class="stat"><span class="stat-num" id="countProjects">12</span><span class="stat-label">Projects</span></div>
+    <div class="stat"><span class="stat-num">4</span><span class="stat-label">Categories</span></div>
+    <div class="stat"><span class="stat-num">12</span><span class="stat-label">Video Clips</span></div>
+    <div class="stat"><span class="stat-num">∞</span><span class="stat-label">Ideas</span></div>
+  </div>
+
+  <!-- ── Filter Bar ── -->
+  <div class="filter-bar">
+    <span class="filter-label">Filter by —</span>
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="motion">Motion</button>
+    <button class="filter-btn" data-filter="event">Event</button>
+    <button class="filter-btn" data-filter="3d">3D</button>
+    <button class="filter-btn" data-filter="film">Film/Teasers</button>
+  </div>
+
+  <!-- ── Projects Grid ── -->
+  <section class="projects-section">
+    <p class="section-eyebrow">— Selected work / All projects &nbsp;·&nbsp; Hover cards to preview video</p>
+
+    <div class="projects-grid" id="projectsGrid">
+
+      <!-- 1: AGT -->
+      <article class="project-card card-xl" data-category="motion" data-project="1">
+        <div class="card-media">
+          <img class="card-thumbnail" src="projects/thumbnail/proj1.png" alt="AGT Logo Animation">
+          <video class="card-video" src="projects/AGT.mp4" loop playsinline preload="none"></video>
+          <span class="video-badge">▶ Preview</span>
+        </div>
+        <div class="card-overlay"></div>
+        <div class="card-inner">
+          <div class="card-row-top"><span class="card-tag">Motion</span><span class="card-year">2024</span></div>
+          <p class="card-num">001 / 012</p>
+          <h2 class="card-title">AGT — Ansci Got Talent Logo Reveal</h2>
+          <p class="card-desc">Dramatic logo reveal with golden particle bursts, volumetric lighting, and a bold 3D chrome emblem for AGT.</p>
+          <div class="card-footer">
+            <div class="card-stack">
+              <span class="stack-pill">After Effects</span>
+              <span class="stack-pill">Cinema 4D</span>
+              <span class="stack-pill">Element 3D</span>
+            </div>
+            <span class="card-arrow">↗</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- 2: Kurt & Minorka -->
+      <article class="project-card card-md" data-category="motion" data-project="2">
+        <div class="card-media">
+          <img class="card-thumbnail" src="projects/thumbnail/proj2.png" alt="Kurt & Minorka Wedding">
+          <video class="card-video" src="projects/LOGO INTRO 4.mp4" loop playsinline preload="none"></video>
+          <span class="video-badge">▶ Preview</span>
+        </div>
+        <div class="card-overlay"></div>
+        <div class="card-inner">
+          <div class="card-row-top"><span class="card-tag">Motion</span><span class="card-year">2024</span></div>
+          <h2 class="card-title">Kurt &amp; Minorka Wedding Film</h2>
+          <p class="card-desc">Elegant wedding title animation with floral watercolor elements, soft bokeh, and a romantic monogram. 28.12.2024.</p>
+          <div class="card-footer">
+            <div class="card-stack">
+              <span class="stack-pill">After Effects</span>
+              <span class="stack-pill">Cinema 4D</span>
+              <span class="stack-pill">Element 3D</span>
+            </div>
+            <span class="card-arrow">↗</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- 3: Short Film / Dance Sport -->
+      <article class="project-card card-md" data-category="film" data-project="3">
+        <div class="card-media">
+          <img class="card-thumbnail" src="projects/thumbnail/proj3.png" alt="Short Film Split Screen">
+          <video class="card-video" src="projects/DANCE SPORT.mp4" loop playsinline preload="none"></video>
+          <span class="video-badge">▶ Preview</span>
+        </div>
+        <div class="card-overlay"></div>
+        <div class="card-inner">
+          <div class="card-row-top"><span class="card-tag">Teaser</span><span class="card-year">2024</span></div>
+          <h2 class="card-title">Dance sport teaser</h2>
+          <p class="card-desc">A short teaser for dance sport competition at Aurora National Science High School.</p>
+          <div class="card-footer">
+            <div class="card-stack">
+              <span class="stack-pill">After Effects</span>
+              <span class="stack-pill">Cinema 4D</span>
+            </div>
+            <span class="card-arrow">↗</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- 4: Bara-Bara Beats -->
+      <article class="project-card card-lg" data-category="film" data-project="4">
+        <div class="card-media">
+          <img class="card-thumbnail" src="projects/thumbnail/proj4.png" alt="Bara-Bara Beats">
+          <video class="card-video" src="projects/GRADE 11 DANCE.mp4" loop playsinline preload="none"></video>
+          <span class="video-badge">▶ Preview</span>
+        </div>
+        <div class="card-overlay"></div>
+        <div class="card-inner">
+          <div class="card-row-top"><span class="card-tag">Teaser</span><span class="card-year">2024</span></div>
+          <p class="card-num">004 / 012</p>
+          <h2 class="card-title">Bara-Bara Beats — AGT competition teaser</h2>
+          <p class="card-desc">Comic style themed teaser made for a group competitor in AGT at Aurora National Science High School</p>
+          <div class="card-footer">
+            <div class="card-stack">
+              <span class="stack-pill">After Effects</span>
+              <span class="stack-pill">Cinema 4D</span>
+            </div>
+            <span class="card-arrow">↗</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- 5: ANSHS Anniversary (no video) -->
+      <article class="project-card card-lg" data-category="event" data-project="5">
+        <div class="card-media">
+          <img class="card-thumbnail" src="projects/thumbnail/proj5.png" alt="ANSHS 42nd Anniversary">
+          <video class="card-video" src="projects/SCHOOL PROJECT.mp4" loop playsinline preload="none"></video>
+          <span class="video-badge">▶ Preview</span>
+        </div>
+        <div class="card-overlay"></div>
+        <div class="card-inner">
+          <div class="card-row-top"><span class="card-tag">Event</span><span class="card-year">2024</span></div>
+          <h2 class="card-title">ANSHS 42nd Founding Anniversary</h2>
+          <p class="card-desc">Commemorative title sequence for Aurora National Science High School's 42nd founding anniversary celebration event.</p>
+          <div class="card-footer">
+            <div class="card-stack">
+              <span class="stack-pill">After Effects</span>
+              <span class="stack-pill">Cinema 4D</span>
+            </div>
+            <span class="card-arrow">↗</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- 6: Layag Pilipinas -->
+      <article class="project-card card-full" data-category="3d" data-project="6">
+        <div class="card-media">
+          <img class="card-thumbnail card-thumbnail-wide" src="projects/thumbnail/proj6.png" alt="Layag Pilipinas">
+          <video class="card-video card-thumbnail-wide" src="projects/TRANSITION 1.mkv" muted loop playsinline preload="none"></video>
+          <span class="video-badge">▶ Preview</span>
+        </div>
+        <div class="card-overlay"></div>
+        <div class="card-inner">
+          <div class="card-row-top"><span class="card-tag">3D</span><span class="card-year">2023</span></div>
+          <p class="card-num">006 / 012</p>
+          <h2 class="card-title">Layag Pilipinas — TV broadcasting</h2>
+          <p class="card-desc">Short clip TV broadcasting studio focusing transitions and 3D motion graphics.</p>
+          <div class="card-footer">
+            <div class="card-stack">
+              <span class="stack-pill">After Effects</span>
+              <span class="stack-pill">Cinema 4D</span>
+              <span class="stack-pill">Element 3D</span>
+              <span class="stack-pill">Blender</span>
+            </div>
+            <span class="card-arrow">↗</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- 7: The Nucleus -->
+      <article class="project-card card-md" data-category="event" data-project="7">
+        <div class="card-media">
+          <img class="card-thumbnail" src="projects/thumbnail/proj7.png" alt="The Nucleus 30 Years">
+          <video class="card-video" src="projects/LOGO INTRO.mp4" loop playsinline preload="none"></video>
+          <span class="video-badge">▶ Preview</span>
+        </div>
+        <div class="card-overlay"></div>
+        <div class="card-inner">
+          <div class="card-row-top"><span class="card-tag">Event</span><span class="card-year">2023</span></div>
+          <h2 class="card-title">The Nucleus — 30 Years of Excellence</h2>
+          <p class="card-desc">Clean editorial documentary opener celebrating 30 consecutive championship years of The Nucleus organization.</p>
+          <div class="card-footer">
+            <div class="card-stack">
+              <span class="stack-pill">After Effects</span>
+              <span class="stack-pill">Cinema 4D</span>
+              <span class="stack-pill">Element 3D</span>
+            </div>
+            <span class="card-arrow">↗</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- 8: ANSHS Alumni Homecoming -->
+      <article class="project-card card-md" data-category="event" data-project="8">
+        <div class="card-media">
+          <img class="card-thumbnail" src="projects/thumbnail/proj8.png" alt="ANSHS Alumni Homecoming">
+          <video class="card-video" src="projects/ALUMNI LOGO - Trim.mp4" loop playsinline preload="none"></video>
+          <span class="video-badge">▶ Preview</span>
+        </div>
+        <div class="card-overlay"></div>
+        <div class="card-inner">
+          <div class="card-row-top"><span class="card-tag">Event</span><span class="card-year">2023</span></div>
+          <h2 class="card-title">ANSHS 13th Grand Alumni Homecoming</h2>
+          <p class="card-desc">3D logo reveal for the 13th alumni grand homecoming event.</p>
+          <div class="card-footer">
+            <div class="card-stack">
+              <span class="stack-pill">After Effects</span>
+              <span class="stack-pill">Cinema 4D</span>
+              <span class="stack-pill">Element 3D</span>
+            </div>
+            <span class="card-arrow">↗</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- 9: I Love Balanga -->
+      <article class="project-card card-md" data-category="3d" data-project="9">
+        <div class="card-media">
+          <img class="card-thumbnail" src="projects/thumbnail/proj9.png" alt="I Love Balanga 3D Set">
+          <video class="card-video" src="projects/STUDIO 2.mkv" loop playsinline preload="none"></video>
+          <span class="video-badge">▶ Preview</span>
+        </div>
+        <div class="card-overlay"></div>
+        <div class="card-inner">
+          <div class="card-row-top"><span class="card-tag">3D</span><span class="card-year">2023</span></div>
+          <h2 class="card-title">Studio to Balanga - TV Broadcasting</h2>
+          <p class="card-desc">3D animation transitioning from news studio to Balanga, Bataan</p>
+          <div class="card-footer">
+            <div class="card-stack">
+              <span class="stack-pill">After Effects</span>
+              <span class="stack-pill">Cinema 4D</span>
+              <span class="stack-pill">Element 3D</span>
+              <span class="stack-pill">Blender</span>
+            </div>
+            <span class="card-arrow">↗</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- 10: Baler -->
+      <article class="project-card card-md" data-category="3d" data-project="10">
+        <div class="card-media">
+          <img class="card-thumbnail" src="projects/thumbnail/proj10.png" alt="Baler 3D Virtual Set">
+          <video class="card-video" src="projects/STUDIO 1.mkv" loop playsinline preload="none"></video>
+          <span class="video-badge">▶ Preview</span>
+        </div>
+        <div class="card-overlay"></div>
+        <div class="card-inner">
+          <div class="card-row-top"><span class="card-tag">3D</span><span class="card-year">2023</span></div>
+          <h2 class="card-title">Studio to Baler - TV Broadcasting</h2>
+          <p class="card-desc">3D animation transitioning from news studio to Baler, Aurora</p>
+          <div class="card-footer">
+            <div class="card-stack">
+              <span class="stack-pill">After Effects</span>
+              <span class="stack-pill">Cinema 4D</span>
+              <span class="stack-pill">Element 3D</span>
+              <span class="stack-pill">Blender</span>
+            </div>
+            <span class="card-arrow">↗</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- 11: Gold Monogram Wedding (no video) -->
+      <article class="project-card card-md" data-category="motion" data-project="11">
+        <div class="card-media">
+          <img class="card-thumbnail" src="projects/thumbnail/proj11.png" alt="Gold Wedding Monogram">
+          <video class="card-video" src="projects/LOGO INTRO 3.mp4" loop playsinline preload="none"></video>
+          <span class="video-badge">▶ Preview</span>
+        </div>
+        <div class="card-overlay"></div>
+        <div class="card-inner">
+          <div class="card-row-top"><span class="card-tag">Motion</span><span class="card-year">2024</span></div>
+          <h2 class="card-title">Gold Monogram Wedding Title</h2>
+          <p class="card-desc">Luxurious gold geometric monogram animation over a sparkling confetti backdrop with elegant botanical accents.</p>
+          <div class="card-footer">
+            <div class="card-stack">
+              <span class="stack-pill">After Effects</span>
+              <span class="stack-pill">Cinema 4D</span>
+              <span class="stack-pill">Element 3D</span>
+            </div>
+            <span class="card-arrow">↗</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- 12: 14th Jamboree -->
+      <article class="project-card card-md" data-category="event" data-project="12">
+        <div class="card-media">
+          <img class="card-thumbnail" src="projects/thumbnail/proj12.png" alt="14th Central Luzon Jamboree">
+          <video class="card-video" src="projects/LOGO INTRO 2.mp4" loop playsinline preload="none"></video>
+          <span class="video-badge">▶ Preview</span>
+        </div>
+        <div class="card-overlay"></div>
+        <div class="card-inner">
+          <div class="card-row-top"><span class="card-tag">Event</span><span class="card-year">2023</span></div>
+          <h2 class="card-title">14th Central Luzon Jamboree</h2>
+          <p class="card-desc">Title card for the ANSHS Boy Scouts of the Philippines delegation competing at the 14th Central Luzon Jamboree.</p>
+          <div class="card-footer">
+            <div class="card-stack">
+              <span class="stack-pill">After Effects</span>
+              <span class="stack-pill">Cinema 4D</span>
+              <span class="stack-pill">Element 3D</span>
+            </div>
+            <span class="card-arrow">↗</span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ── CTA ── -->
+  <div class="cta-section">
+    <div class="cta-text">
+      <h2>Got a project in mind?</h2>
+      <p>Let's build something together — reach out anytime.</p>
+    </div>
+    <a href="https://www.facebook.com/james.barnayha.7" class="cta-btn">Get in touch ↗</a>
+  </div>
+
+  <!-- ── Footer ── -->
+  <footer>
+    <span>© <span id="footerYear"></span> — jmrbs works</span>
+    <span>Built with care &amp; caffeine</span>
+    <div style="display:flex; gap:2rem;">
+    </div>
+  </footer>
+
+  <!-- ── Modal ── -->
+  <div class="modal-backdrop" id="modalBackdrop">
+    <div class="modal" id="modal">
+      <div class="modal-header">
+        <div>
+          <span class="card-tag" id="modalTag">Motion</span>
+          <h2 class="modal-title" id="modalTitle">Project Name</h2>
+        </div>
+        <button class="modal-close" id="modalClose">✕</button>
+      </div>
+      <div class="modal-body">
+
+        <!-- Video player (shown when project has a video) -->
+        <div class="modal-video-wrap" id="modalVideoWrap" style="display:none;">
+          <video id="modalVideo" controls playsinline style="width:100%; display:block; background:#000; aspect-ratio:16/9;">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+
+        <!-- Fallback image (shown when no video) -->
+        <img id="modalThumb" src="" alt="" class="modal-thumb-img" style="display:none;">
+
+        <p id="modalDesc" style="margin-top:1.5rem;"></p>
+        <p id="modalExtra" style="margin-top:0.8rem;"></p>
+        <div class="card-stack" id="modalStack" style="margin:1rem 0;"></div>
+        <div class="modal-links">
+          <a href="#" class="modal-link primary" id="modalWatchLink"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
